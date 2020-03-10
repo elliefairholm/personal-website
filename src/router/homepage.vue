@@ -7,7 +7,7 @@
 import homepageInfoTile from "@/components/presentational/homepage-info-tile.vue";
 
 export default {
-  name: "homepageInfoTile",
+  name: "home",
   components: {
     "homepage-info-tile": homepageInfoTile
   }

@@ -2,7 +2,7 @@
   <div id="app">
     <nav-bar></nav-bar>
     <router-view />
-    <footer></footer>
+    <my-footer></my-footer>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   name: "App",
   components: {
     "nav-bar": navbar,
-    footer: footer
+    "my-footer": footer
   }
 };
 </script>

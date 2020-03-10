@@ -5,8 +5,8 @@
     </div>
     <div class="sections">
       <router-link
-        :to="{page}"
         v-for="(page, index) in pages"
+        :to="page"
         :key="index"
         class="uppercase"
         :class="{selected: page === selectedPage}"

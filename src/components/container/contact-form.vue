@@ -1,32 +1,41 @@
 <template>
-  <form class="contact-form" @submit="(event) => submitForm(event)">
-    <label>
-      Name:
-      <span class="required">*</span>
-    </label>
-    <textarea type="text" placeholder="Please enter your name here..."></textarea>
-    <label>
-      Email:
-      <span class="required">*</span>
-    </label>
-    <textarea type="text" placeholder="Please enter your email here..."></textarea>
-    <label>Phone Number:</label>
-    <textarea type="text" placeholder="Please enter your phone number..."></textarea>
-    <label>
-      Message:
-      <span class="required">*</span>
-    </label>
-    <textarea type="text" placeholder="Please enter your message here..." id="contact-form-message"></textarea>
-    <div class="form-footer">
-      <p>
-        <span class="required">*</span> = Required Fields
-      </p>
-      <div class="contact-form-buttons-container">
-        <cta-button text="Send Message!"></cta-button>
-        <cta-button text="Clear Info"></cta-button>
+  <div class="contact-form-container">
+    <form class="contact-form" @submit="(event) => submitForm(event)">
+      <label>
+        Name:
+        <span class="required">*</span>
+      </label>
+      <textarea type="text" placeholder="Please enter your name here..."></textarea>
+      <label>
+        Email:
+        <span class="required">*</span>
+      </label>
+      <textarea type="text" placeholder="Please enter your email here..."></textarea>
+      <label>Phone Number:</label>
+      <textarea type="text" placeholder="Please enter your phone number..."></textarea>
+      <label>
+        Message:
+        <span class="required">*</span>
+      </label>
+      <textarea
+        type="text"
+        placeholder="Please enter your message here..."
+        id="contact-form-message"
+      ></textarea>
+      <div class="form-footer">
+        <p>
+          <span class="required">*</span> = Required Fields
+        </p>
+        <div class="contact-form-buttons-container">
+          <cta-button text="Send Message!"></cta-button>
+          <cta-button text="Clear Info"></cta-button>
+        </div>
       </div>
+    </form>
+    <div>
+      <p class="sent-successfully">Your message has been sent! I will aim to reply within a week :)</p>
     </div>
-  </form>
+  </div>
 </template>
 
 <script>
@@ -47,6 +56,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.contact-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -68,6 +83,7 @@ textarea {
   padding: 5px;
   margin: 10px 0;
   height: 20px;
+  overflow: hidden;
 }
 
 #contact-form-message {
@@ -99,5 +115,9 @@ textarea {
 
 .required {
   color: red;
+}
+
+.sent-successfully {
+  display: none;
 }
 </style>

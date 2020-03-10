@@ -8,9 +8,7 @@
         v-for="(page, index) in pages"
         :to="page"
         :key="index"
-        class="uppercase"
-        :class="{selected: page === selectedPage}"
-        @click="() => updatePage(page)"
+        class="uppercase link"
       >{{ page === '/' ? 'home' : page.slice(1) }}</router-link>
     </div>
   </div>
@@ -26,11 +24,6 @@ export default {
     return {
       pages: ["/", "/blog", "/cv", "/contact"]
     };
-  },
-  methods: {
-    updatePage(page) {
-      this.selectedPage = page;
-    }
   }
 };
 </script>
@@ -64,7 +57,12 @@ export default {
   padding-bottom: 15px;
 }
 
-.selected {
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.router-link-exact-active {
   border-bottom: 3px maroon solid;
 }
 </style>

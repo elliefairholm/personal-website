@@ -17,6 +17,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .cta-button {
+  all: unset;
   border: 2px maroon solid;
   background: maroon;
   color: white;
@@ -24,5 +25,6 @@ export default {
   padding: 5px;
   font-weight: 500;
   margin-left: 5px;
+  text-align: center;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <form class="contact-form" @submit="submitForm">
+  <form class="contact-form" @submit="(event) => submitForm(event)">
     <label>
       Name:
       <span class="required">*</span>
@@ -34,7 +34,8 @@ import ctaButton from "../presentational/cta-button.vue";
 export default {
   name: "contact-form",
   methods: {
-    submitForm() {
+    submitForm(event) {
+      event.preventDefault();
       console.log("i'm submitting the form");
     }
   },

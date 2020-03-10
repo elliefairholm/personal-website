@@ -40,4 +40,8 @@ export default {
 .icon {
   height: 25px;
 }
+
+.logo-links > * {
+  margin: 5px;
+}
 </style>

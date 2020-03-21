@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-page">
+  <div class="blog-list-page">
     <div class="blog-section">
       <blog-intro></blog-intro>
       <blog-list></blog-list>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.blog-page {
+.blog-list-page {
   padding-top: 15px;
   padding-bottom: 30px;
   display: flex;

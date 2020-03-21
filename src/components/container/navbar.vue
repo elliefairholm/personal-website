@@ -39,6 +39,7 @@ export default {
   background: white;
   z-index: 1;
   top: 0;
+  padding-bottom: 15px;
 }
 
 .sections {

@@ -1,16 +1,16 @@
 <template>
   <div class="footer">
     <div class="logo-links">
-      <a href="mailto:elliefairholm@gmail.com">
+      <a target="_blank" href="mailto:elliefairholm@gmail.com">
         <img class="icon" src="../../assets/email-icon.png" alt="Email Icon" />
       </a>
-      <a href="https://www.linkedin.com/in/elliefairholm">
+      <a target="_blank" href="https://www.linkedin.com/in/elliefairholm">
         <img class="icon" src="../../assets/linkedin-logo.jpg" alt="LinkedIn Logo" />
       </a>
-      <a href="https://github.com/elliefairholm">
+      <a target="_blank" href="https://github.com/elliefairholm">
         <img class="icon" src="../../assets/github-logo.svg" alt="Github Logo" />
       </a>
-      <a href="https://www.instagram.com/elliefairholm">
+      <a target="_blank" href="https://www.instagram.com/elliefairholm">
         <img class="icon" src="../../assets/instagram-logo.png" alt="Instagram Logo" />
       </a>
     </div>

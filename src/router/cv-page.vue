@@ -1,7 +1,9 @@
 <template>
   <div class="cv-page">
-    <page-intro :intro="intro"></page-intro>
-    <cv-file></cv-file>
+    <div class="cv-section">
+      <page-intro :intro="intro"></page-intro>
+      <cv-file></cv-file>
+    </div>
     <my-footer />
   </div>
 </template>
@@ -21,7 +23,7 @@ export default {
   },
   data() {
     return {
-      intro: `Below you will find my CV. You can take a look at my <a class="link" href="https://www.linkedin.com/in/elliefairholm">linkedin</a> for more information or drop me a message using the contact page. Click <a class="link">here</a> if you want to download it.`
+      intro: `Below you will find my CV. You can take a look at my <a target="_blank" class="link" href="https://www.linkedin.com/in/elliefairholm">linkedin</a> for more information or drop me a message using the contact page. Click <a target="_blank" class="link">here</a> if you want to download it.`
     };
   },
   methods: {
@@ -34,7 +36,6 @@ export default {
 
 <style scoped>
 .cv-page {
-  width: 80%;
   padding-top: 15px;
   padding-bottom: 30px;
   display: flex;
@@ -42,5 +43,9 @@ export default {
   align-items: center;
   position: relative;
   top: 180px;
+}
+
+.cv-section {
+  width: 80%;
 }
 </style>

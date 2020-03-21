@@ -1,5 +1,5 @@
 <template>
-  <div class="homepage">
+  <div class="homepage-info">
     <div class="profile-picture-container">
       <img class="profile-picture" src="../../assets/me.jpeg" alt="Ellie Fairholm" />
     </div>
@@ -35,7 +35,7 @@ export default {
   height: 300px;
 }
 
-.homepage {
+.homepage-info {
   display: flex;
   padding: 5% 10%;
   justify-content: space-evenly;

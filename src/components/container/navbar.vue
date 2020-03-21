@@ -35,6 +35,10 @@ export default {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  position: fixed;
+  background: white;
+  z-index: 1;
+  top: 0;
 }
 
 .sections {

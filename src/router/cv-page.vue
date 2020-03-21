@@ -2,7 +2,7 @@
   <div class="cv-page">
     <div class="cv-section">
       <page-intro :intro="intro"></page-intro>
-      <cv-file></cv-file>
+      <file></file>
     </div>
     <my-footer />
   </div>
@@ -11,14 +11,14 @@
 <script>
 // @ is an alias to /src
 import pageIntro from "@/components/presentational/page-intro.vue";
-import cvFile from "@/components/container/cv-file.vue";
+import file from "@/components/container/file.vue";
 import footer from "@/components/container/footer.vue";
 
 export default {
   name: "cv",
   components: {
     "page-intro": pageIntro,
-    "cv-file": cvFile,
+    file: file,
     "my-footer": footer
   },
   data() {
@@ -47,5 +47,6 @@ export default {
 
 .cv-section {
   width: 80%;
+  margin-bottom: 5%;
 }
 </style>

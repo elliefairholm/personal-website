@@ -1,7 +1,7 @@
 <template>
   <div class="blog-list-page">
     <div class="blog-section">
-      <blog-intro></blog-intro>
+      <page-intro :intro="intro"></page-intro>
       <blog-list></blog-list>
     </div>
     <my-footer />
@@ -10,16 +10,21 @@
 
 <script>
 // @ is an alias to /src
-import blogIntro from "@/components/presentational/blog-intro.vue";
+import pageIntro from "@/components/presentational/page-intro.vue";
 import blogList from "@/components/container/blog-list.vue";
 import footer from "@/components/container/footer.vue";
 
 export default {
   name: "blog",
   components: {
-    "blog-intro": blogIntro,
+    "page-intro": pageIntro,
     "blog-list": blogList,
     "my-footer": footer
+  },
+  data() {
+    return {
+      intro: `Welcome to my blog! I hope you enjoy what you find. These will mainly be tech orientated posts so that I can track my personal growth as a software engineer. Each week I hope to post a 'What I learnt this week' blog. Feel free to add comments, like and/or share any of them!`
+    };
   }
 };
 </script>

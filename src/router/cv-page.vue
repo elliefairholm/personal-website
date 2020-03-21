@@ -1,5 +1,6 @@
 <template>
   <div class="cv-page">
+    <page-intro :intro="intro"></page-intro>
     <cv-file></cv-file>
     <my-footer />
   </div>
@@ -7,20 +8,32 @@
 
 <script>
 // @ is an alias to /src
+import pageIntro from "@/components/presentational/page-intro.vue";
 import cvFile from "@/components/container/cv-file.vue";
 import footer from "@/components/container/footer.vue";
 
 export default {
   name: "cv",
   components: {
+    "page-intro": pageIntro,
     "cv-file": cvFile,
     "my-footer": footer
+  },
+  data() {
+    return {
+      intro: `Below you will find my CV. You can take a look at my <a class="link" href="https://www.linkedin.com/in/elliefairholm">linkedin</a> for more information or drop me a message using the contact page. Click <a class="link">here</a> if you want to download it.`
+    };
+  },
+  methods: {
+    downloadCV() {
+      console.log("downaloding");
+    }
   }
 };
 </script>
 
 <style scoped>
-.blog-page {
+.cv-page {
   width: 80%;
   padding-top: 15px;
   padding-bottom: 30px;

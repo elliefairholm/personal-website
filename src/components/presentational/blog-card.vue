@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-card-container">
+  <router-link class="blog-card-container link" @click="openBlog" :to="`/blog/${blog.title}`">
     <div class="blog-info-container">
       <p class="title">{{blog.title}}</p>
       <p class="date">{{blog.date}}</p>
@@ -7,7 +7,7 @@
     <div class="blog-content-container">
       <p>{{blog.content}}</p>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -16,6 +16,10 @@ export default {
   props: {
     blog: {
       type: Object,
+      required: true
+    },
+    openBlog: {
+      type: Function,
       required: true
     }
   }
@@ -29,6 +33,7 @@ export default {
   flex-direction: column;
   width: 90%;
   border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
 }
 
 .title {
@@ -41,9 +46,8 @@ export default {
   font-size: 0.75rem;
 }
 
-.blog-date-container {
-}
-
-.blog-content-container {
+.link {
+  text-decoration: none;
+  color: black;
 }
 </style>

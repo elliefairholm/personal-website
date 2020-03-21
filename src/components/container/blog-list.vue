@@ -1,6 +1,6 @@
 <template>
   <div class="blog-list-container">
-    <blog-card v-for="(blog, index) in blogs" :key="index" :blog="blog" />
+    <blog-card v-for="(blog, index) in blogs" :key="index" :blog="blog" :openBlog="openBlog" />
   </div>
 </template>
 
@@ -25,9 +25,9 @@ export default {
     };
   },
   methods: {
-    submitForm(event) {
+    openBlog(event) {
       event.preventDefault();
-      console.log("i'm submitting the form");
+      console.log("i'm opening the blog");
     }
   },
   components: {

@@ -2,7 +2,7 @@
   <div class="cv-page">
     <div class="cv-section">
       <page-intro :intro="intro"></page-intro>
-      <file></file>
+      <file :path="filePath"></file>
     </div>
     <my-footer />
   </div>
@@ -13,6 +13,7 @@
 import pageIntro from "@/components/presentational/page-intro.vue";
 import file from "@/components/container/file.vue";
 import footer from "@/components/container/footer.vue";
+// import image from "@/assets/cv.svg";
 
 export default {
   name: "cv",
@@ -23,7 +24,8 @@ export default {
   },
   data() {
     return {
-      intro: `Below you will find my CV. You can take a look at my <a target="_blank" class="link" href="https://www.linkedin.com/in/elliefairholm">linkedin</a> for more information or drop me a message using the contact page. Click <a target="_blank" class="link">here</a> if you want to download it.`
+      intro: `Below you will find my CV. You can take a look at my <a target="_blank" class="link" href="https://www.linkedin.com/in/elliefairholm">linkedin</a> for more information or drop me a message using the contact page. Click <a target="_blank" class="link">here</a> if you want to download it.`,
+      filePath: "cv.svg"
     };
   },
   methods: {
@@ -36,6 +38,7 @@ export default {
 
 <style scoped>
 .cv-page {
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 30px;
   display: flex;

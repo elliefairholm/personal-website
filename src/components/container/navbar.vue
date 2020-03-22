@@ -1,7 +1,9 @@
 <template>
   <div class="navbar">
     <div class="header-logo-container">
-      <img class="logo" src="../../assets/name.png" alt="Ellie Fairholm Logo" />
+      <a href="/">
+        <img class="logo" src="../../assets/name.png" alt="Ellie Fairholm Logo" />
+      </a>
     </div>
     <div class="sections">
       <router-link

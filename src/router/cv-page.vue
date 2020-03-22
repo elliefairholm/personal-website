@@ -1,8 +1,8 @@
 <template>
   <div class="cv-page">
     <div class="cv-section">
-      <page-intro :intro="intro"></page-intro>
       <file :path="filePath"></file>
+      <!-- <page-intro :intro="intro"></page-intro> -->
     </div>
     <my-footer />
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 // @ is an alias to /src
-import pageIntro from "@/components/presentational/page-intro.vue";
+// import pageIntro from "@/components/presentational/page-intro.vue";
 import file from "@/components/container/file.vue";
 import footer from "@/components/container/footer.vue";
 // import image from "@/assets/cv.svg";
@@ -18,13 +18,13 @@ import footer from "@/components/container/footer.vue";
 export default {
   name: "cv",
   components: {
-    "page-intro": pageIntro,
+    // "page-intro": pageIntro,
     file: file,
     "my-footer": footer
   },
   data() {
     return {
-      intro: `Below you will find my CV. You can take a look at my <a target="_blank" class="link" href="https://www.linkedin.com/in/elliefairholm">linkedin</a> for more information or drop me a message using the contact page. Click <a target="_blank" class="link">here</a> if you want to download it.`,
+      intro: `Below you will find my CV. You can take a look at my <a target="_blank" class="link" href="https://www.linkedin.com/in/elliefairholm">linkedin</a> for more information or drop me a message using the contact page. Click <a target="_blank" class="link" @click="downloadCV">here</a> if you want to download it.`,
       filePath: "cv.svg"
     };
   },

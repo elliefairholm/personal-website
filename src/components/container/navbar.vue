@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      pages: ["/", "/blog", "/cv", "/contact"]
+      pages: ["/", "/cv", "/contact"] // have removed blog for mvp
     };
   }
 };

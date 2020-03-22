@@ -18,13 +18,14 @@ export default {
 <style scoped>
 .cta-button {
   all: unset;
-  border: 2px maroon solid;
-  background: maroon;
+  border: 2px #c70808 solid;
+  background: #c70808;
   color: white;
   width: 110px;
   padding: 5px;
   font-weight: 500;
   margin-left: 5px;
   text-align: center;
+  border-radius: 5px;
 }
 </style>

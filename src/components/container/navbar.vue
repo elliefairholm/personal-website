@@ -68,6 +68,6 @@ export default {
 }
 
 .router-link-exact-active {
-  border-bottom: 3px maroon solid;
+  border-bottom: 3px #c70808 solid;
 }
 </style>

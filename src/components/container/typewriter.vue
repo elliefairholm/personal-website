@@ -1,7 +1,7 @@
 <template>
   <div class="typewriter">
     <p>
-      Barcelona based Full-Stack Developer specialising in
+      Experienced with
       <span class="typed-text">{{ typingValue }}</span>
     </p>
     <div class="cursor">&nbsp;</div>.
@@ -16,7 +16,6 @@ export default {
       typingValue: "",
       typingStatus: false,
       typingArray: [
-        "Javascript",
         "Node",
         "SQL",
         "MongoDB",

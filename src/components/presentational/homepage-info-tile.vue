@@ -5,6 +5,7 @@
     </div>
 
     <div class="basic-info">
+      <p>Barcelona based Full-Stack Developer specialising in Javascript.</p>
       <typewriter></typewriter>
       <p>
         Always interested in learning new technologies. In fact, I learnt Vue in less than a week, and used it for the front-end of this website. You can take a look at my github repository

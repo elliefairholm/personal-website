@@ -21,6 +21,7 @@ export default {
 
 <style scoped>
 .homepage {
+  width: 100%;
   position: relative;
   top: 180px;
   display: flex;

@@ -5,22 +5,32 @@
     </div>
 
     <div class="basic-info">
-      Barcelona based Full-Stack Developer specialising in Javascript. Experienced in Node, both relational and non-relational databases GraphQL, Anuglar, React and Typescript. Always interested in learning new technologies. In fact, I learnt Vue in less than a week, and used it for the front-end of this website. You can take a look at my github repository here:
-      <br />
-      <br />
-      <a target="_blank" class="link">https://github.com/elliefairholm/personal-website</a>
-      <br />Currently mastering: Vue.js.
-      <br />
-      <br />I'm highly motived and always the optimist. I like facing the unknown and coming up with new solutions to challenging problems.
-      <br />
-      <br />Massive fan of the theatre, and can't stop tap dancing.
+      <typewriter></typewriter>
+      <p>
+        Always interested in learning new technologies. In fact, I learnt Vue in less than a week, and used it for the front-end of this website. You can take a look at my github repository
+        <a
+          target="_blank"
+          href="https://github.com/elliefairholm/personal-website"
+          class="link"
+        >here</a>.
+        <br />
+        <br />Currently mastering: Vue.js.
+        <br />
+        <br />I'm highly motived and always the optimist. I like facing the unknown and coming up with new solutions to challenging problems.
+        <br />
+        <br />Massive fan of the theatre, and can't stop tap dancing.
+      </p>
     </div>
   </div>
 </template>
 
 <script>
+import typewriter from "@/components/container/typewriter.vue";
 export default {
-  name: "homepage"
+  name: "homepage",
+  components: {
+    typewriter: typewriter
+  }
 };
 </script>
 
@@ -47,10 +57,11 @@ export default {
   flex-direction: column;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 .link {
   text-decoration: none;
-  color: maroon;
+  color: #d11919;
 }
 </style>

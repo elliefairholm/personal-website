@@ -24,8 +24,13 @@ export default {
   font-weight: 500;
 }
 
+.page-intro >>> .uppercase {
+  text-transform: uppercase;
+}
+
 .page-intro {
   margin-top: 20px;
   margin-bottom: 20px;
+  text-align: center;
 }
 </style>

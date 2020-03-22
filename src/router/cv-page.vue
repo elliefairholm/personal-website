@@ -53,9 +53,16 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2.5%;
 }
 .download-button {
   margin-top: 5%;
   text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+  .cv-section {
+    width: 100%;
+  }
 }
 </style>

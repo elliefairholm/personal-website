@@ -29,6 +29,5 @@ export default {
 .file {
   width: 80%;
   box-shadow: 0px 2px 6px rgba(186, 186, 186, 0.25);
-  margin-top: 40px;
 }
 </style>

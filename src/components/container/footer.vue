@@ -41,7 +41,16 @@ export default {
   height: 25px;
 }
 
+.logo-links {
+  display: flex;
+  align-items: center;
+}
+
 .logo-links > * {
   margin: 5px;
+}
+
+.copyright {
+  text-align: center;
 }
 </style>

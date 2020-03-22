@@ -96,4 +96,15 @@ export default {
 .icon {
   height: 50px;
 }
+
+@media screen and (max-width: 750px) {
+  .contact-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end; /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: 1fr; */
+    /* height: 65vh; */
+  }
+}
 </style>

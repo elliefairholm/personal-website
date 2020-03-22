@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <div class="header-logo-container">
-      <img style="width:auto" src="../../assets/name.png" alt="Ellie Fairholm Logo" />
+      <img class="logo" src="../../assets/name.png" alt="Ellie Fairholm Logo" />
     </div>
     <div class="sections">
       <router-link
@@ -69,5 +69,11 @@ export default {
 
 .router-link-exact-active {
   border-bottom: 3px #c70808 solid;
+}
+
+@media screen and (max-width: 750px) {
+  .logo {
+    width: 100%;
+  }
 }
 </style>

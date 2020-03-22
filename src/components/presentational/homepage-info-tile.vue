@@ -65,4 +65,18 @@ export default {
   text-decoration: none;
   color: #d11919;
 }
+
+@media screen and (max-width: 750px) {
+  .homepage-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 5% 10%;
+  justify-content: space-evenly; */
+  }
+
+  .profile-picture-container {
+    margin-bottom: 5%;
+  }
+}
 </style>

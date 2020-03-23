@@ -5,7 +5,7 @@ This is the repository for my personal website. At the moment, there is only the
 I learnt Vue.js in less than a week for this project, and hope to use this website to keep track of my progress as a Full-Stack Software Engineer.
 
 <p align="center">
-    <img src="client/src/assets/website-example.png" alt="elliefairholm.com homepage"/>
+    <img src="src/assets/website-example.png" alt="elliefairholm.com homepage"/>
 </p>
 
 

@@ -7,7 +7,7 @@ You can find my back-end repository here: [https://github.com/elliefairholm/pers
 I learnt Vue.js in less than a week for this project, and hope to use this website to keep track of my progress as a Full-Stack Software Engineer.
 
 <p align="center">
-    <img src="src/assets/website-example.png" alt="elliefairholm.com homepage"/>
+    <img src="src/assets/website-homepage.png" alt="elliefairholm.com homepage"/>
 </p>
 
 

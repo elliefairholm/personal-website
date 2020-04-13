@@ -1,17 +1,12 @@
 <template>
   <div class="navbar">
-    <div class="header-logo-container">
-      <a href="/">
-        <img class="logo" src="../../assets/name.png" alt="Ellie Fairholm Logo" />
-      </a>
-    </div>
+    <a class="logo-container" href="/" :class="{ hide : selectedRoute === '/'}">
+      <img class="logo" src="../../assets/robot.png" alt="walle robot" />
+    </a>
     <div class="sections">
-      <router-link
-        v-for="(page, index) in pages"
-        :to="page"
-        :key="index"
-        class="uppercase link"
-      >{{ page === '/' ? 'home' : page.slice(1) }}</router-link>
+      <div v-for="(page, index) in pages" :key="index" @click="selectPage(page)">
+        <router-link :to="page" exact class="link">{{ page === '/' ? 'home' : page.slice(1) }}</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -20,12 +15,20 @@
 export default {
   name: "navbar",
   props: {
-    msg: String
+    selectedRoute: {
+      type: String,
+      default: "/"
+    }
   },
   data() {
     return {
       pages: ["/", "/cv", "/contact"] // have removed blog for mvp
     };
+  },
+  methods: {
+    selectPage(page) {
+      this.selectedRoute = page;
+    }
   }
 };
 </script>
@@ -34,43 +37,58 @@ export default {
 <style scoped>
 .navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   align-items: center;
   position: fixed;
   background: white;
   z-index: 1;
   top: 0;
-  padding-bottom: 15px;
+  padding: 5px 0;
+  height: 7vh;
+}
+
+.logo-container {
+  margin-left: 1.5%;
+  color: #05386b;
+  display: flex;
+}
+
+.logo {
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  max-width: 50px;
+  align-items: center;
 }
 
 .sections {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
-  padding-top: 20px;
+  /* align-items: center; */
+  width: 400px;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
-.header-logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  border-bottom: 1px lightgray solid;
-  padding-bottom: 15px;
+.bold {
+  font-weight: 500;
 }
 
 .link {
   text-decoration: none;
-  color: black;
+  color: #505050;
+}
+
+a {
+  text-decoration: none;
 }
 
 .router-link-exact-active {
-  border-bottom: 3px #c70808 solid;
+  color: #ff8f00;
+  font-weight: 500;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 750px) {

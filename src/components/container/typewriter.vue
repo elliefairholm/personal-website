@@ -1,11 +1,7 @@
 <template>
-  <div class="typewriter">
-    <p>
-      Experienced with
-      <span class="typed-text">{{ typingValue }}</span>
-    </p>
-    <div class="cursor">&nbsp;</div>.
-  </div>
+  <p class="typewriter">
+    <span>{{ typingValue }}</span>
+  </p>
 </template>
 
 <script>
@@ -14,58 +10,38 @@ export default {
   data() {
     return {
       typingValue: "",
-      typingStatus: false,
-      typingArray: [
-        "Node",
-        "SQL",
-        "MongoDB",
-        "Redis",
-        "GraphQL",
-        "Anuglar",
-        "React",
-        "Typescript"
-      ],
-      typingSpeed: 100,
-      erasingSpeed: 100,
-      newTextDelay: 500,
-      typingArrayIndex: 0,
+      typingSentence: "i'm a full-stack developer specialising in javascript",
+      typingSpeed: 75,
+      erasingSpeed: 75,
+      newTextDelay: 2000,
       charIndex: 0
     };
   },
   methods: {
     typeText() {
-      if (this.charIndex < this.typingArray[this.typingArrayIndex].length) {
-        if (!this.typingStatus) this.typingStatus = true;
-        this.typingValue += this.typingArray[this.typingArrayIndex].charAt(
-          this.charIndex
-        );
+      if (this.charIndex < this.typingSentence.length) {
+        this.typingValue += this.typingSentence.charAt(this.charIndex);
         this.charIndex += 1;
         setTimeout(this.typeText, this.typingSpeed);
       } else {
-        this.typingStatus = false;
         setTimeout(this.eraseText, this.newTextDelay);
       }
     },
     eraseText() {
-      if (this.charIndex > 0) {
-        if (!this.typingStatus) this.typingStatus = true;
-        this.typingValue = this.typingArray[this.typingArrayIndex].substring(
-          0,
-          this.charIndex - 1
-        );
-        this.charIndex -= 1;
-        setTimeout(this.eraseText, this.erasingSpeed);
-      } else {
-        this.typingStatus = false;
-        this.typingArrayIndex += 1;
-        if (this.typingArrayIndex >= this.typingArray.length)
-          this.typingArrayIndex = 0;
-        setTimeout(this.typeText, this.typingSpeed + 1000);
-      }
+      // if (this.charIndex > 0) {
+      //   this.typingValue = this.typingSentence.substring(0, this.charIndex - 1);
+      //   this.charIndex -= 1;
+      //   setTimeout(this.eraseText, this.erasingSpeed);
+      // } else {
+      //   setTimeout(this.typeText, this.typingSpeed + 1000);
+      // }
+      this.typingValue = "";
+      this.charIndex = 0;
+      setTimeout(this.typeText, this.typingSpeed);
     }
   },
   created() {
-    setTimeout(this.typeText, this.newTextDelay + 200);
+    this.typeText();
   }
 };
 </script>
@@ -75,30 +51,7 @@ export default {
 .typewriter {
   display: flex;
   align-items: center;
-}
-
-.typed-text {
-  color: red;
-}
-
-.cursor {
-  display: inline-block;
-  margin-left: 3px;
-  width: 1px;
-  background-color: black;
-  height: 20px;
-  animation: cursorBlink 1s infinite;
-}
-
-@keyframes cursorBlink {
-  49% {
-    background-color: black;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
+  min-height: 162px;
+  color: #7395ae;
 }
 </style>

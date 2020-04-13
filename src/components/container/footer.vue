@@ -34,7 +34,9 @@ export default {
 .footer {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  align-items: center;
+  width: 95%;
+  margin-bottom: 1%;
 }
 
 .icon {

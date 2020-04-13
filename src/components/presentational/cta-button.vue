@@ -1,5 +1,8 @@
 <template>
-  <button class="cta-button">{{ text }}</button>
+  <div class="cta-button">
+    <button class="button">{{ text }}</button>
+    <img class="robot" :src="require('../../assets/robot-arms-extended.png')" alt="walle robot" />
+  </div>
 </template>
 
 <script>
@@ -17,9 +20,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .cta-button {
+  position: relative;
+}
+
+.button {
   all: unset;
-  border: 2px #c70808 solid;
-  background: #c70808;
+  position: absolute;
+  background: #ffc64b;
   color: white;
   width: 110px;
   padding: 5px;
@@ -27,5 +34,12 @@ export default {
   margin-left: 5px;
   text-align: center;
   border-radius: 5px;
+  margin-top: 38px;
+}
+
+.robot {
+  height: 150px;
+  width: 150px;
+  margin-left: 80px;
 }
 </style>

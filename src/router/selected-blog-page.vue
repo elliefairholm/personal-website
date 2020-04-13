@@ -23,6 +23,9 @@ export default {
       type: String,
       required: true
     }
+  },
+  mounted() {
+    this.$emit("set-route", this.$route.path);
   }
 };
 </script>
@@ -36,7 +39,7 @@ export default {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 180px;
+  top: 76px;
 }
 .blog-section {
   width: 80%;

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import homepageInfoTile from './homepage.vue'
+import homepage from './homepage.vue'
+// import cv from './cv-page.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +9,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: homepageInfoTile
+    component: homepage
   },
   {
     path: '/contact',
@@ -47,6 +48,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ './cv-page.vue')
+  },
+  {
+    path: '/*',
+    name: 'Error',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ './error-page.vue')
   }
 ]
 

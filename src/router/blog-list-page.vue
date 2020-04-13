@@ -25,6 +25,9 @@ export default {
     return {
       intro: `Welcome to my blog! I hope you enjoy what you find. These will mainly be tech orientated posts so that I can track my personal growth as a software engineer. Each week I hope to post a 'What I learnt this week' blog. Feel free to add comments, like and/or share any of them!`
     };
+  },
+  mounted() {
+    this.$emit("set-route", this.$route.path);
   }
 };
 </script>
@@ -37,7 +40,7 @@ export default {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 180px;
+  top: 76px;
 }
 .blog-section {
   width: 80%;

@@ -1,8 +1,8 @@
 <template>
   <div class="cv-page">
     <div class="cv-section">
-      <file :path="filePath"></file>
-      <a class="download-button" href="./ellie-fairholm-cv.pdf" download>
+      <cv />
+      <a href="./ellie-fairholm-cv.pdf" download>
         <cta-button text="Download CV"></cta-button>
       </a>
     </div>
@@ -12,26 +12,19 @@
 
 <script>
 // @ is an alias to /src
-import file from "@/components/container/file.vue";
+import cv from "../components/container/cv.vue";
 import ctaButton from "@/components/presentational/cta-button.vue";
 import footer from "@/components/container/footer.vue";
 
 export default {
-  name: "cv",
+  name: "cv-page",
   components: {
-    file: file,
+    cv: cv,
     "cta-button": ctaButton,
     "my-footer": footer
   },
-  data() {
-    return {
-      filePath: "cv.svg"
-    };
-  },
-  methods: {
-    downloadCV() {
-      console.log("downaloding");
-    }
+  mounted() {
+    this.$emit("set-route", this.$route.path);
   }
 };
 </script>
@@ -39,21 +32,22 @@ export default {
 <style scoped>
 .cv-page {
   width: 100%;
-  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 180px;
+  top: 7vh;
+}
+
+.font-6rem {
+  font-size: 6rem;
 }
 
 .cv-section {
   width: 80%;
-  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2.5%;
 }
 .download-button {
   margin-top: 5%;

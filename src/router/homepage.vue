@@ -3,7 +3,10 @@
     <walle class="walle-container" />
     <div class="main-content">
       <h1 class="title font-10rem">hi, i'm ellie</h1>
-      <typewriter class="font-2-5rem center" />
+      <typewriter
+        class="font-2-5rem center"
+        typingSentence="i'm a full-stack developer specialising in javascript"
+      />
     </div>
     <my-footer class="footer" />
   </div>

@@ -7,10 +7,15 @@
 <script>
 export default {
   name: "typewriter",
+  props: {
+    typingSentence: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
       typingValue: "",
-      typingSentence: "i'm a full-stack developer specialising in javascript",
       typingSpeed: 75,
       erasingSpeed: 75,
       newTextDelay: 2000,

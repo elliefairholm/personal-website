@@ -1,7 +1,12 @@
 <template>
   <div class="contact-form-container">
-    <div v-if="!formSent" class="cancel-button" @click="toggleForm">X</div>
-    <form v-if="!formSent" class="contact-form" @submit.prevent="(event) => submitForm(event)">
+    <typewriter class="loading" v-if="loading" typingSentence="......" />
+    <div v-if="!loading && !formSent" class="cancel-button" @click="toggleForm">X</div>
+    <form
+      v-if="!loading && !formSent"
+      class="contact-form"
+      @submit.prevent="(event) => submitForm(event)"
+    >
       <label>
         Name:
         <span class="required">*</span>
@@ -55,7 +60,7 @@
         </div>
       </div>
     </form>
-    <div v-else class="submit-message font-1-5rem">
+    <div v-else-if="formSent & !loading" class="submit-message font-1-5rem">
       <p>Thank you for getting in touch, your message has been sent!</p>
     </div>
     <div v-if="formSendError" class="submit-message font-1-5rem">
@@ -66,6 +71,7 @@
 
 <script>
 const { required, email } = require("vuelidate/lib/validators");
+import typewriter from "@/components/container/typewriter.vue";
 import ctaButton from "../presentational/cta-button.vue";
 import ApiClient from "../../services/";
 
@@ -80,6 +86,7 @@ export default {
   data() {
     return {
       formSent: false,
+      loading: false,
       formSendError: false,
       name: "",
       emailAddress: "",
@@ -102,12 +109,12 @@ export default {
   methods: {
     async submitForm() {
       this.$v.$touch();
+      this.loading = true;
       if (
         this.$v.name.$error ||
         this.$v.emailAddress.$error ||
         this.$v.message.$error
       ) {
-        console.log(this.$v);
         return;
       } else {
         const data = {
@@ -117,17 +124,16 @@ export default {
         };
         if (this.number) data.number = this.number;
         ApiClient.sendEmail(data).then(res => {
+          this.loading = false;
           if (res.success) this.formSent = true;
           else this.formSendError = true;
         });
       }
     }
   },
-  mounted() {
-    console.log(this.$v);
-  },
   components: {
-    "cta-button": ctaButton
+    "cta-button": ctaButton,
+    typewriter: typewriter
   }
 };
 </script>
@@ -217,5 +223,9 @@ textarea {
 .error {
   color: red;
   margin-top: 0;
+}
+
+.loading {
+  font-size: 32px;
 }
 </style>

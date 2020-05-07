@@ -1,4 +1,4 @@
-const BACK_END_URI = 'http://elliefairholm.com:3000';
+const BACK_END_URI = 'https://elliefairholm.com';
 module.exports = {
   BACK_END_URI,
 };

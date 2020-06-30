@@ -1,9 +1,8 @@
 <template>
   <div class="contact-form-container">
     <typewriter class="loading" v-if="loading" typingSentence="......" />
-    <div v-if="!loading && !formSent" class="cancel-button" @click="toggleForm">X</div>
     <form
-      v-if="!loading && !formSent"
+      v-if="!loading && !formSent && !formSendError"
       class="contact-form"
       @submit.prevent="(event) => submitForm(event)"
     >
@@ -60,7 +59,7 @@
         </div>
       </div>
     </form>
-    <div v-else-if="formSent & !loading" class="submit-message font-1-5rem">
+    <div v-else-if="formSent && !loading && !formSendError" class="submit-message font-1-5rem">
       <p>Thank you for getting in touch, your message has been sent!</p>
     </div>
     <div v-if="formSendError" class="submit-message font-1-5rem">
@@ -77,12 +76,6 @@ import ApiClient from "../../services/";
 
 export default {
   name: "contact-form",
-  props: {
-    toggleForm: {
-      type: Function,
-      required: true
-    }
-  },
   data() {
     return {
       formSent: false,
@@ -174,6 +167,7 @@ textarea {
 #contact-form-message {
   height: 200px;
   text-align: start;
+  overflow-y: scroll;
 }
 
 .form-footer {
@@ -186,6 +180,9 @@ textarea {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+  margin-left: 20px;
+  height: 150px;
+  width: 510px;
 }
 
 .contact-form-button {

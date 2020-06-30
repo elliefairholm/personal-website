@@ -12,7 +12,7 @@
 // @ is an alias to /src
 import pageIntro from "@/components/presentational/page-intro.vue";
 import blogList from "@/components/container/blog-list.vue";
-import footer from "@/components/container/footer.vue";
+import footer from "@/components/container/footer-bar.vue";
 
 export default {
   name: "blog",

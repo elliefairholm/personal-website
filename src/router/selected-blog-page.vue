@@ -10,7 +10,7 @@
 <script>
 // @ is an alias to /src
 import selectedBlog from "@/components/container/selected-blog.vue";
-import footer from "@/components/container/footer.vue";
+import footer from "@/components/container/footer-bar.vue";
 
 export default {
   name: "blog",

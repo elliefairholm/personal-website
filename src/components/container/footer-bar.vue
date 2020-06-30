@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "footer",
+  name: "footer-bar",
   data() {
     return {
       profilePicture: "../../assets/me.jpeg"

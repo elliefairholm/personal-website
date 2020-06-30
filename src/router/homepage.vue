@@ -2,9 +2,9 @@
   <div class="homepage">
     <walle class="walle-container" />
     <div class="main-content">
-      <h1 class="title font-10rem">hi, i'm ellie</h1>
+      <h1 class="title">hi, i'm ellie</h1>
       <typewriter
-        class="font-2-5rem center"
+        class="typing center"
         typingSentence="i'm a full-stack developer specialising in javascript"
       />
     </div>
@@ -16,7 +16,7 @@
 // @ is an alias to /src
 import walle from "@/components/container/walle.vue";
 import typewriter from "@/components/container/typewriter.vue";
-import footer from "@/components/container/footer.vue";
+import footer from "@/components/container/footer-bar.vue";
 
 export default {
   name: "home",
@@ -40,14 +40,17 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
   margin-bottom: 5%;
+  margin-top: 140px;
+  width: 80%;
 }
 
 .main-content > * {
@@ -57,13 +60,10 @@ export default {
 .title {
   color: #05386b;
   text-align: center;
-}
-
-.font-10rem {
   font-size: 10rem;
 }
 
-.font-2-5rem {
+.typing {
   font-size: 2.5rem;
 }
 
@@ -84,5 +84,28 @@ a {
 
 .center {
   text-align: center;
+}
+
+@media screen and (max-width: 415px) {
+  .title {
+    font-size: 5rem;
+  }
+
+  .typing {
+    font-size: 1.5rem;
+    margin-top: 5%;
+  }
+
+  .walle-container {
+    padding-right: 0;
+    height: 30%;
+  }
+
+  .main-content {
+    margin-top: 75px;
+    /* height: 65vh; */
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
 }
 </style>

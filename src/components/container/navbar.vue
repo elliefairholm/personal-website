@@ -65,7 +65,6 @@ export default {
 .sections {
   display: flex;
   justify-content: space-evenly;
-  /* align-items: center; */
   width: 400px;
 }
 
@@ -93,6 +92,16 @@ a {
 
 @media screen and (max-width: 750px) {
   .logo {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .logo-container {
+    display: none;
+  }
+
+  .sections {
     width: 100%;
   }
 }

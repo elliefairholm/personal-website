@@ -1,7 +1,5 @@
 <template>
-  <p class="typewriter">
-    <span>{{ typingValue }}</span>
-  </p>
+  <div class="typewriter">{{ typingValue }}</div>
 </template>
 
 <script>
@@ -16,7 +14,7 @@ export default {
   data() {
     return {
       typingValue: "",
-      typingSpeed: 75,
+      typingSpeed: 50,
       erasingSpeed: 75,
       newTextDelay: 2000,
       charIndex: 0
@@ -33,13 +31,6 @@ export default {
       }
     },
     eraseText() {
-      // if (this.charIndex > 0) {
-      //   this.typingValue = this.typingSentence.substring(0, this.charIndex - 1);
-      //   this.charIndex -= 1;
-      //   setTimeout(this.eraseText, this.erasingSpeed);
-      // } else {
-      //   setTimeout(this.typeText, this.typingSpeed + 1000);
-      // }
       this.typingValue = "";
       this.charIndex = 0;
       setTimeout(this.typeText, this.typingSpeed);
@@ -55,7 +46,8 @@ export default {
 <style scoped>
 .typewriter {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   min-height: 162px;
   color: #7395ae;
 }

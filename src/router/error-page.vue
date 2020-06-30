@@ -14,7 +14,7 @@
 <script>
 // @ is an alias to /src
 import ctaButton from "@/components/presentational/cta-button.vue";
-import footer from "@/components/container/footer.vue";
+import footer from "@/components/container/footer-bar.vue";
 
 export default {
   name: "error",

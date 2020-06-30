@@ -37,6 +37,10 @@ export default {
   margin-top: 38px;
 }
 
+.button:hover {
+  background: #fab319;
+}
+
 .robot {
   height: 150px;
   width: 150px;

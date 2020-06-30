@@ -1,21 +1,23 @@
 <template>
   <div id="cv">
-    <h1 class="name font-3rem uppercase">ellie fairholm</h1>
+    <h1 class="name font-3rem">ellie fairholm</h1>
     <div class="details">
-      <a href="mailto:elliefairholm@gmail.com">
-        <p>elliefairholm@gmail.com</p>
-      </a>
-      <p>|</p>
-      <a href="http://elliefairholm.com" target="_blank">
-        <p>elliefairholm.com</p>
-      </a>
-      <p>|</p>
-      <p>+447964900622</p>
-      <p>|</p>
       <a href="http://linkedin.com/in/elliefairholm" target="_blank">
         <p>linkedin.com/in/elliefairholm</p>
       </a>
-      <p>|</p>
+      <p class="separator">|</p>
+      <a href="mailto:elliefairholm@gmail.com">
+        <p>elliefairholm@gmail.com</p>
+      </a>
+      <p class="separator">|</p>
+      <a href="http://elliefairholm.com" target="_blank">
+        <p>elliefairholm.com</p>
+      </a>
+      <p class="separator">|</p>
+      <a href="tel:+447964900622">
+        <p>+447964900622</p>
+      </a>
+      <p class="separator">|</p>
       <a href="http://github.com/elliefairholm" target="_blank">
         <p>github.com/elliefairholm</p>
       </a>
@@ -26,77 +28,53 @@
     <div class="section-container">
       <div class="section-title">skills</div>
       <div class="skills">
-        <div class="skill-line">
-          <div>
-            <p class="bubble">MongoDB</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">React</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Vue</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Optimism</p>
-            <p />
-          </div>
+        <div class="bubble">
+          <p>React</p>
         </div>
-        <div class="skill-line">
-          <div>
-            <p class="bubble">Node.js</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">SQL</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Angular</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Teamwork</p>
-            <p />
-          </div>
+        <div class="bubble">
+          <p>Vue</p>
         </div>
-        <div class="skill-line">
-          <div>
-            <p class="bubble">Redis</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">GraphQL</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Koa.js</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Adaptability</p>
-            <p />
-          </div>
+        <div class="bubble">
+          <p>AWS</p>
         </div>
-        <div class="skill-line">
-          <div>
-            <p class="bubble">Express.js</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Jest</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Cypress.io</p>
-            <p />
-          </div>
-          <div>
-            <p class="bubble">Communication</p>
-            <p />
-          </div>
+        <div class="bubble">
+          <p>Optimism</p>
+        </div>
+        <div class="bubble">
+          <p>Node.js</p>
+        </div>
+        <div class="bubble">
+          <p>SQL</p>
+        </div>
+        <div class="bubble">
+          <p>MongoDB</p>
+        </div>
+        <div class="bubble">
+          <p>Teamwork</p>
+        </div>
+        <div class="bubble">
+          <p>GraphQL</p>
+        </div>
+        <div class="bubble">
+          <p>Redis</p>
+        </div>
+        <div class="bubble">
+          <p>Angular</p>
+        </div>
+        <div class="bubble">
+          <p>Webpack</p>
+        </div>
+        <div class="bubble">
+          <p>Adaptability</p>
+        </div>
+        <div class="bubble">
+          <p>Cypress.io</p>
+        </div>
+        <div class="bubble">
+          <p>Jest</p>
+        </div>
+        <div class="bubble">
+          <p>Communication</p>
         </div>
       </div>
     </div>
@@ -110,9 +88,9 @@
               <span class="italic">Client Integration Developer</span>
             </p>
             <ul class="example-details">
-              <li>A virtual health assistant that connects you to a global network of doctors for quick answers or in-depth consultations</li>
-              <li>Responsibilities: Integrating the ABI application into incoming clients' systems.</li>
-              <li>Tech Stack: React, Node, GraphQL.</li>
+              <li>A virtual health assistant that connects you to a global network of doctors for quick answers or in-depth consultations.</li>
+              <li>Responsibilities: Creating personalised landing pages for new clients. Ensuring comprehensive front-end testing. Automating the integration process. Improving the partner portal with updated utilisation metrics and client user information.</li>
+              <li>Tech Stack: React, GraphQL, AWS, Node.js, SQL.</li>
             </ul>
           </div>
           <div class="example-date-location">
@@ -267,15 +245,15 @@
       <div class="table-three">
         <div class="no-margin">
           <p class="bold">Tap Dancing</p>
-          <p class="italic">Advanced 2 ISTD qualification.</p>
+          <p class="italic">Advanced 2 ISTD certified.</p>
         </div>
         <div class="no-margin">
           <p class="bold">Ballet</p>
-          <p class="italic">Grade 8 RAD qualification.</p>
+          <p class="italic">Grade 8 RAD certified.</p>
         </div>
         <div class="no-margin">
           <p class="bold">Hockey</p>
-          <p class="italic">County level, and national school finals.</p>
+          <p class="italic">County and national level.</p>
         </div>
       </div>
     </div>
@@ -306,14 +284,13 @@ export default {
 
 .name {
   color: #05386b;
-  text-transform: capitalize;
+  font-size: 3rem;
 }
 
 .section-title {
   font-size: 2rem;
   color: #05386b;
   margin-bottom: 2%;
-  text-transform: capitalize;
 }
 
 .section-container {
@@ -347,10 +324,6 @@ export default {
   margin-top: 16px;
 }
 
-.font-3rem {
-  font-size: 3rem;
-}
-
 .bold {
   font-weight: 500;
 }
@@ -366,27 +339,25 @@ ul {
 .skills {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 2.5%;
-}
-
-.skill-line {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.skills > * {
-  margin: 0 auto;
 }
 
 .bubble {
   background: #ffc64b;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
-  width: 150px;
-  text-align: center;
-  margin: 1%;
+  width: 135px;
+  margin: 2.5%;
+  height: 40px;
+}
+
+.bubble:hover {
+  background: #fab319;
 }
 
 .evenly-spaced {
@@ -404,9 +375,26 @@ ul {
 .no-margin > * {
   margin-top: 0;
   margin-bottom: 0;
+  margin: 0 5px;
 }
 
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 415px) {
+  .name {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .separator {
+    display: none;
+  }
 }
 </style>

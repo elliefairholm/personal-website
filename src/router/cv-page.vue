@@ -14,7 +14,7 @@
 // @ is an alias to /src
 import cv from "../components/container/cv.vue";
 import ctaButton from "@/components/presentational/cta-button.vue";
-import footer from "@/components/container/footer.vue";
+import footer from "@/components/container/footer-bar.vue";
 
 export default {
   name: "cv-page",
@@ -37,6 +37,7 @@ export default {
   align-items: center;
   position: relative;
   top: 7vh;
+  padding: 0 25px;
 }
 
 .font-6rem {
@@ -52,11 +53,5 @@ export default {
 .download-button {
   margin-top: 5%;
   text-decoration: none;
-}
-
-@media screen and (max-width: 750px) {
-  .cv-section {
-    width: 100%;
-  }
 }
 </style>

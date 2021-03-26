@@ -37,6 +37,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   min-height: 100vh;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {

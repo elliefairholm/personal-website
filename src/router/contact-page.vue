@@ -19,9 +19,6 @@
           <p>github.com/elliefairholm</p>
         </a>
       </div>
-      <div class="contact-form-section">
-        <contact-form></contact-form>
-      </div>
     </div>
     <my-footer />
   </div>
@@ -29,13 +26,11 @@
 
 <script>
 // @ is an alias to /src
-import contactForm from "@/components/container/contact-form.vue";
 import footer from "@/components/container/footer-bar.vue";
 
 export default {
   name: "contact",
   components: {
-    "contact-form": contactForm,
     "my-footer": footer
   },
   mounted() {

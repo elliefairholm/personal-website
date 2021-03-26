@@ -23,7 +23,7 @@
       </a>
     </div>
     <div class="description">
-      <p>Full-Stack Developer specialising in Javascript. Always curious to learn new technologies, and everything learnt forms part of my blog series called 'What I learnt this week'. Highly motivated and always positive. Flexible approach and effective communicator in order to meet demanding deadlines.</p>
+      <p>Full-Stack Developer specialising in Javascript. Always curious to learn new technologies. Highly motivated and always positive. Flexible work approach and effective communicator in order to meet demanding deadlines.</p>
     </div>
     <div class="section-container">
       <div class="section-title">skills</div>
@@ -84,18 +84,18 @@
         <div class="content-example">
           <div class="example-information">
             <p>
-              <span class="bold">ABI Health Spain</span>,
+              <span class="bold">Abi Global Health Limited</span>,
               <span class="italic">Client Integration Developer</span>
             </p>
             <ul class="example-details">
-              <li>A virtual health assistant that connects you to a global network of doctors for quick answers or in-depth consultations.</li>
-              <li>Responsibilities: Creating personalised landing pages for new clients. Ensuring comprehensive front-end testing. Automating the integration process. Improving the partner portal with updated utilisation metrics and client user information.</li>
-              <li>Tech Stack: React, GraphQL, AWS, Node.js, SQL.</li>
+              <li>A medical microconsultation service that allows users to ask real doctors and other healthcare professionals any health question and receive personalised medical answers.</li>
+              <li>Responsibilities: Meeting with new clients and integrating their technologies with our existing systems. Curating custom client landing pages, ensuring comprehensive front-end testing. Automating the integration process. Documenting APIs, and improving the Partner Portal with updated utilisation metrics and client user information.</li>
+              <li>Tech Stack: React, GraphQL, AWS, Node.js, MySQL.</li>
             </ul>
           </div>
           <div class="example-date-location">
             <p class="date">2020 - present</p>
-            <p class="location">Barcelona</p>
+            <p class="location">Barcelona and London</p>
           </div>
         </div>
         <div class="content-example">

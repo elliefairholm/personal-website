@@ -23,7 +23,7 @@
       </a>
     </div>
     <div class="description">
-      <p>Full-Stack Developer specialising in Javascript. Always curious to learn new technologies. Highly motivated and always positive. Flexible work approach and effective communicator in order to meet demanding deadlines.</p>
+      <p>Full-Stack Developer specialising in Javascript. Curiosity for learning new technologies. Currently writing a programming book on how to deploy an Elixir application from development to production. Highly motivated and always positive. Flexible approach and effective communicator in order to meet demanding deadlines.</p>
     </div>
     <div class="section-container">
       <div class="section-title">skills</div>
@@ -84,6 +84,21 @@
         <div class="content-example">
           <div class="example-information">
             <p>
+              <span class="bold">Imagen Therapeutics</span>,
+              <span class="italic">Full Stack Developer</span>
+            </p>
+            <ul class="example-details">
+              <li>A biotech company personalising clinical cancer diagnoses and accelerating drug discovery.</li>
+              <li>Responsibilities: Developing and maintaining a client portal displaying database information and scientific data visualisations. Updating deprecated code and architecting a new database deployment. Learnt self-management and project organisation.</li>
+              <li>Tech Stack: RReact, D3, Azure, Node.js, MongoDB.</li>
+            </ul>
+          </div>
+          <div class="example-date-location">
+            <p class="date">2022 - 2023</p>
+            <p class="location">Barcelona and London</p>
+          </div>
+          <div class="example-information">
+            <p>
               <span class="bold">Abi Global Health Limited</span>,
               <span class="italic">Client Integration Developer</span>
             </p>
@@ -94,7 +109,7 @@
             </ul>
           </div>
           <div class="example-date-location">
-            <p class="date">2020 - present</p>
+            <p class="date">2020 - 2022</p>
             <p class="location">Barcelona and London</p>
           </div>
         </div>
